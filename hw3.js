@@ -13,7 +13,7 @@ function splitAndMerge(str, sp) {
 // Task 2
 function convert (hash) {
   var arr = [];
-  for (let key in hash) {
+  for (var key in hash) {
     var propArr = [];
     propArr.push(key);
     propArr.push(hash[key]);
@@ -22,4 +22,4 @@ function convert (hash) {
   return arr;
 }
 
-// console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
+console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
