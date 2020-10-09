@@ -9,3 +9,17 @@ function splitAndMerge(str, sp) {
 }
 
 // console.log(splitAndMerge("My name is John"," "));
+
+// Task 2
+function convert (hash) {
+  var arr = [];
+  for (let key in hash) {
+    var propArr = [];
+    propArr.push(key);
+    propArr.push(hash[key]);
+    arr.push(propArr);
+  }
+  return arr;
+}
+
+// console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
