@@ -54,60 +54,32 @@ function reverseWords(str) {
 
 // console.log(reverseWords(" A fun little challenge! "));
 
+//Task 5
+function stringExpansion(str) {
+    let count = 1;
 
+    function charExpansion(count, char) {
+        let arr = [];
+        for (let i = 0; i < count; i++) {
+            arr.push(char);
+        }
+        return arr.join("");
+    }
 
+    if (str == "") {
+        return str;
+    } else {
+        return str.split("")
+            .map(function (char) {
+                if (!+char && +char !== 0) {
+                    return charExpansion(count, char);
+                } else {
+                    count = +char;
+                    return "";
+                }
+            })
+            .join("");
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(stringExpansion("3D2a1d2f"));
