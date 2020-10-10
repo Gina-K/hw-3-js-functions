@@ -112,3 +112,20 @@ function transform(baseArray) {
 // console.log(newArray[3]()); // should return 40
 // console.log(newArray[4]()); // should return 50
 // console.log(newArray);
+
+//Task 8
+function sum() {
+    var arg = [].slice.call(arguments);
+
+    function recursiveSum(arg) {
+        if (arg.length === 1) {
+            return arg[0];
+        } else {
+            return arg[0] + recursiveSum(arg.slice(1, arg.length));
+        }
+    }
+
+    return arguments.length === 0 ? 0 : recursiveSum(arg);
+}
+
+// console.log(sum(1, 2, 3, 4, 7));
