@@ -85,13 +85,30 @@ function stringExpansion(str) {
 // console.log(stringExpansion("3D2a1d2f"));
 
 // Task 6
-function largest () {
+function largest() {
     return Math.max.apply(null, arguments);
 }
 
-function smallest () {
+function smallest() {
     return Math.min.apply(null, arguments);
 }
 
 // console.log(largest(2, 0.1, -5, 100, 3));
 // console.log(smallest(2, 0.1, -5, 100, 3));
+
+// Task 7
+function transform(baseArray) {
+    var newArray = baseArray.map(function (item) {
+        return function () {
+            return item;
+        }
+    });
+    return newArray;
+}
+
+// const baseArray = [10, 20, 30, 40, 50];
+// const newArray = transform(baseArray);
+//
+// console.log(newArray[3]()); // should return 40
+// console.log(newArray[4]()); // should return 50
+// console.log(newArray);
