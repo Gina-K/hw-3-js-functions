@@ -83,3 +83,15 @@ function stringExpansion(str) {
 }
 
 // console.log(stringExpansion("3D2a1d2f"));
+
+// Task 6
+function largest () {
+    return Math.max.apply(null, arguments);
+}
+
+function smallest () {
+    return Math.min.apply(null, arguments);
+}
+
+// console.log(largest(2, 0.1, -5, 100, 3));
+// console.log(smallest(2, 0.1, -5, 100, 3));
