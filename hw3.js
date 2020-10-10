@@ -56,11 +56,11 @@ function reverseWords(str) {
 
 //Task 5
 function stringExpansion(str) {
-    let count = 1;
+    var count = 1;
 
     function charExpansion(count, char) {
-        let arr = [];
-        for (let i = 0; i < count; i++) {
+        var arr = [];
+        for (var i = 0; i < count; i++) {
             arr.push(char);
         }
         return arr.join("");
