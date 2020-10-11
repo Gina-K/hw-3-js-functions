@@ -129,3 +129,15 @@ function sum() {
 }
 
 // console.log(sum(1, 2, 3, 4, 7));
+
+// Task 9
+function countDown(num) {
+    setTimeout(function count(num) {
+        if (num >= 0) {
+            console.log(num);
+            setTimeout(count, 1000, num - 1);
+        }
+    }, 1000, num);
+}
+
+// countDown(3);
