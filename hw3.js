@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // Task 1
 function splitAndMerge(str, sp) {
@@ -9,6 +9,7 @@ function splitAndMerge(str, sp) {
 }
 
 // console.log(splitAndMerge("My name is John"," "));
+
 
 // Task 2
 function convert(hash) {
@@ -23,6 +24,7 @@ function convert(hash) {
 }
 
 // console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
+
 
 //Task 3
 function toCamelCase(str) {
@@ -43,6 +45,7 @@ function toCamelCase(str) {
 
 // console.log(toCamelCase("The_stealth_warrior"));
 
+
 // Task 4
 function reverseWords(str) {
     return str.split(" ")
@@ -53,6 +56,7 @@ function reverseWords(str) {
 }
 
 // console.log(reverseWords(" A fun little challenge! "));
+
 
 //Task 5
 function stringExpansion(str) {
@@ -84,6 +88,7 @@ function stringExpansion(str) {
 
 // console.log(stringExpansion("3D2a1d2f"));
 
+
 // Task 6
 function largest() {
     return Math.max.apply(null, arguments);
@@ -96,6 +101,7 @@ function smallest() {
 // console.log(largest(2, 0.1, -5, 100, 3));
 // console.log(smallest(2, 0.1, -5, 100, 3));
 
+
 // Task 7
 function transform(baseArray) {
     var newArray = baseArray.map(function (item) {
@@ -106,12 +112,13 @@ function transform(baseArray) {
     return newArray;
 }
 
-// const baseArray = [10, 20, 30, 40, 50];
-// const newArray = transform(baseArray);
+// var baseArray = [10, 20, 30, 40, 50];
+// var newArray = transform(baseArray);
 //
 // console.log(newArray[3]()); // should return 40
 // console.log(newArray[4]()); // should return 50
 // console.log(newArray);
+
 
 //Task 8
 function sum() {
@@ -130,6 +137,7 @@ function sum() {
 
 // console.log(sum(1, 2, 3, 4, 7));
 
+
 // Task 9
 function countDown(num) {
     setTimeout(function count(num) {
@@ -141,6 +149,7 @@ function countDown(num) {
 }
 
 // countDown(3);
+
 
 // Task 10
 Function.prototype.myBind = function (context) {
