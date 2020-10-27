@@ -78,10 +78,10 @@ function sum() {
 }
 
 function countDown(num) {
-    setTimeout(function count(num) {
+    setInterval(function () {
         if (num >= 0) {
             console.log(num);
-            setTimeout(count, 1000, num - 1);
+            num--;
         }
     }, 1000, num);
 }
