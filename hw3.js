@@ -10,11 +10,9 @@ function splitAndMerge(str, sp) {
 function convert(hash) {
     var arr = [];
     for (var key in hash) {
-        var propArr = [];
-        propArr.push(key);
-        propArr.push(hash[key]);
-        arr.push(propArr);
+        arr.push([key, hash[key]]);
     }
+
     return arr;
 }
 
