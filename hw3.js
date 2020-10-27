@@ -31,30 +31,20 @@ function reverseWords(str) {
 }
 
 function stringExpansion(str) {
-    var count = 1;
-
-    function charExpansion(count, char) {
-        var arr = [];
-        for (var i = 0; i < count; i++) {
-            arr.push(char);
-        }
-        return arr.join("");
-    }
-
-    if (str == "") {
-        return str;
-    } else {
-        return str.split("")
-            .map(function (char) {
-                if (!+char && +char !== 0) {
-                    return charExpansion(count, char);
-                } else {
-                    count = +char;
-                    return "";
-                }
-            })
+    function charsExpansion(count, chars) {
+        return chars.split("").map(function (char) {
+            var arr = [];
+            for (var i = 0; i < count; i++) {
+                arr.push(char);
+            }
+            return arr.join("");
+        })
             .join("");
     }
+
+    return str.replace(/(\d*)(\d)([A-Za-z]*)/g, function (all, dumpNumbers, count, chars) {
+        return charsExpansion(count, chars);
+    });
 }
 
 function largest() {
