@@ -17,18 +17,10 @@ function convert(hash) {
 }
 
 function toCamelCase(str) {
-    var separator;
-
-    if (str.indexOf("-") !== -1) {
-        separator = "-";
-    } else if (str.indexOf("_") !== -1) {
-        separator = "_";
-    }
-
-    return str.split(separator).map(function (word, index) {
-        return index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1);
+    return str.replace(/(?<=-|_)./g, function (char) {
+        return char.toUpperCase();
     })
-        .join("");
+        .replaceAll(/-|_/g, "");
 }
 
 function reverseWords(str) {
