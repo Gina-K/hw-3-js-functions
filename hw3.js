@@ -25,11 +25,10 @@ function toCamelCase(str) {
         separator = "_";
     }
 
-    var arr = str.split(separator).map(function (word, index) {
+    return str.split(separator).map(function (word, index) {
         return index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1);
-    });
-
-    return arr.join("");
+    })
+        .join("");
 }
 
 function reverseWords(str) {
