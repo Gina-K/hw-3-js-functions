@@ -17,10 +17,9 @@ function convert(hash) {
 }
 
 function toCamelCase(str) {
-    return str.replace(/(?<=-|_)./g, function (char) {
+    return str.replace(/(-|_)(.)/g, function (all, separator, char) {
         return char.toUpperCase();
     })
-        .replaceAll(/-|_/g, "");
 }
 
 function reverseWords(str) {
