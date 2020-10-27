@@ -56,12 +56,11 @@ function smallest() {
 }
 
 function transform(baseArray) {
-    var newArray = baseArray.map(function (item) {
+    return baseArray.map(function (item) {
         return function () {
             return item;
         }
     });
-    return newArray;
 }
 
 function sum() {
