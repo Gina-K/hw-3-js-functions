@@ -1,10 +1,10 @@
 'use strict';
 
 function splitAndMerge(str, sp) {
-    var array = str.split(" ").map(function (elem) {
+    return str.split(" ").map(function (elem) {
         return elem.split("").join(sp);
     })
-    return array.join(" ");
+        .join(" ");
 }
 
 function convert(hash) {
