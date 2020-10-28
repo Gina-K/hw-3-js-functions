@@ -66,15 +66,10 @@ function transform(baseArray) {
 function sum() {
     var arg = [].slice.call(arguments);
 
-    function recursiveSum(arg) {
-        if (arg.length === 1) {
-            return arg[0];
-        } else {
-            return arg[0] + recursiveSum(arg.slice(1, arg.length));
-        }
+    if (!arg.length) {
+        return 0;
     }
-
-    return arguments.length === 0 ? 0 : recursiveSum(arg);
+    return arg[0] + sum.apply(null, arg.slice(1));
 }
 
 function countDown(num) {
